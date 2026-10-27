@@ -1,0 +1,1845 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: Q0DeR-MaG1C-BrAnCh-Fo2-NoN-GiT-Or-No-C0MmIt
+nodes_managed: true
+exported_at: "2026-10-27T09:48:43Z"
+modules:
+    "":
+        dir_name: AFSIM 仿真系统根工程
+        title: AFSIM 仿真系统根工程
+        scope: []
+        source_files: []
+        children:
+            - air_to_air_demos
+            - core_engine
+            - documentation
+            - electronic_warfare_demos
+            - iads_and_c2_demos
+            - missile_and_weapons_demos
+            - naval_and_ground_demos
+            - resources
+            - scenario_examples
+            - sensor_and_radar_demos
+            - simulation_framework_demos
+            - space_and_satellite_demos
+            - tools
+            - training
+        depends_on: []
+        related_to: []
+    air_to_air_demos:
+        dir_name: 空战与六自由度飞行演示集
+        title: 空战与六自由度飞行演示集
+        scope:
+            - demos/air_to_air/
+            - demos/brawler/
+            - demos/six_dof/
+            - demos/p6dof/
+            - demos/six_dof_with_brawler/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/mover
+    core_engine:
+        dir_name: AFSIM_WSF 核心引擎与工具链
+        title: AFSIM/WSF 核心引擎与工具链
+        scope:
+            - swdev/src/
+            - swdev/dependencies/
+        source_files: []
+        children:
+            - core_engine/build_system
+            - core_engine/core_runtime
+            - core_engine/documentation
+            - core_engine/event_mission_runtime
+            - core_engine/platform_models
+            - core_engine/shared_tools
+            - core_engine/visualization_gui
+            - core_engine/weapons_warlock
+        depends_on: []
+        related_to: []
+    core_engine/build_system:
+        dir_name: AFSIM CMake 构建系统与依赖资源
+        title: AFSIM CMake 构建系统与依赖资源
+        scope:
+            - swdev/src/cmake/
+            - swdev/dependencies/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/core_runtime:
+        dir_name: AFSIM_WSF 核心运行时与扩展模块集合
+        title: AFSIM/WSF 核心运行时与扩展模块集合
+        scope:
+            - swdev/src/core/
+        source_files: []
+        children:
+            - core_engine/core_runtime/wsf_core_runtime
+            - core_engine/core_runtime/wsf_cyber
+            - core_engine/core_runtime/wsf_grammar_check
+            - core_engine/core_runtime/wsf_l16
+            - core_engine/core_runtime/wsf_mil
+            - core_engine/core_runtime/wsf_mil_parser
+            - core_engine/core_runtime/wsf_mtt
+            - core_engine/core_runtime/wsf_nx
+            - core_engine/core_runtime/wsf_parser
+            - core_engine/core_runtime/wsf_sensor_plot_lib
+            - core_engine/core_runtime/wsf_util
+            - core_engine/core_runtime/wsf_weapon_server
+        depends_on: []
+        related_to: []
+    core_engine/core_runtime/wsf_core_runtime:
+        dir_name: WSF 核心运行时（AFSIM 仿真内核）
+        title: WSF 核心运行时（AFSIM 仿真内核）
+        scope:
+            - swdev/src/core/wsf/
+        source_files: []
+        children:
+            - core_engine/core_runtime/wsf_core_runtime/comm
+            - core_engine/core_runtime/wsf_core_runtime/core_framework
+            - core_engine/core_runtime/wsf_core_runtime/dis
+            - core_engine/core_runtime/wsf_core_runtime/event_pipe
+            - core_engine/core_runtime/wsf_core_runtime/mover
+            - core_engine/core_runtime/wsf_core_runtime/observer
+            - core_engine/core_runtime/wsf_core_runtime/processor
+            - core_engine/core_runtime/wsf_core_runtime/script
+            - core_engine/core_runtime/wsf_core_runtime/sensor
+            - core_engine/core_runtime/wsf_core_runtime/traffic
+            - core_engine/core_runtime/wsf_core_runtime/xio
+            - core_engine/core_runtime/wsf_core_runtime/xio_sim
+        depends_on: []
+        related_to:
+            - path: core_engine/event_mission_runtime
+    core_engine/core_runtime/wsf_core_runtime/comm:
+        dir_name: 通信协议栈与网络仿真核心
+        title: 通信协议栈与网络仿真核心
+        scope:
+            - swdev/src/core/wsf/source/comm/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_l16
+    core_engine/core_runtime/wsf_core_runtime/core_framework:
+        dir_name: WSF 核心仿真框架（AFSIM 基础库）
+        title: WSF 核心仿真框架（AFSIM 基础库）
+        scope:
+            - swdev/src/core/wsf/source/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/dis
+    core_engine/core_runtime/wsf_core_runtime/dis:
+        dir_name: DIS 仿真接口与 PDU 编解码层
+        title: DIS 仿真接口与 PDU 编解码层
+        scope:
+            - swdev/src/core/wsf/source/dis/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/core_framework
+            - path: iads_and_c2_demos
+    core_engine/core_runtime/wsf_core_runtime/event_pipe:
+        dir_name: 事件管道子系统（Event Pipe）
+        title: 事件管道子系统（Event Pipe）
+        scope:
+            - swdev/src/core/wsf/source/event_pipe/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_util
+            - path: core_engine/visualization_gui/post_processor
+            - path: tools/pyrunplotter
+    core_engine/core_runtime/wsf_core_runtime/mover:
+        dir_name: 平台运动器与导航路径子系统
+        title: 平台运动器与导航路径子系统
+        scope:
+            - swdev/src/core/wsf/source/mover/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: air_to_air_demos
+            - path: space_and_satellite_demos
+    core_engine/core_runtime/wsf_core_runtime/observer:
+        dir_name: WSF 仿真事件观察者接口集合
+        title: WSF 仿真事件观察者接口集合
+        scope:
+            - swdev/src/core/wsf/source/observer/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/visualization_gui/wizard/event_logging_plugins
+            - path: core_engine/weapons_warlock/warlock_plugins/sim_runtime
+    core_engine/core_runtime/wsf_core_runtime/processor:
+        dir_name: WSF 处理器与任务调度子系统
+        title: WSF 处理器与任务调度子系统
+        scope:
+            - swdev/src/core/wsf/source/processor/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: iads_and_c2_demos
+            - path: missile_and_weapons_demos
+    core_engine/core_runtime/wsf_core_runtime/script:
+        dir_name: AFSIM 脚本引擎核心（WsfScript）
+        title: AFSIM 脚本引擎核心（WsfScript）
+        scope:
+            - swdev/src/core/wsf/source/script/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/util_script
+            - path: electronic_warfare_demos
+            - path: simulation_framework_demos
+    core_engine/core_runtime/wsf_core_runtime/sensor:
+        dir_name: 传感器仿真核心框架 (WSF Sensor)
+        title: 传感器仿真核心框架 (WSF Sensor)
+        scope:
+            - swdev/src/core/wsf/source/sensor/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: sensor_and_radar_demos
+            - path: space_and_satellite_demos
+    core_engine/core_runtime/wsf_core_runtime/traffic:
+        dir_name: 交通背景流量生成器（陆_海_空）
+        title: 交通背景流量生成器（陆/海/空）
+        scope:
+            - swdev/src/core/wsf/source/traffic/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/visualization_gui/wizard/importer_plugins
+            - path: naval_and_ground_demos
+    core_engine/core_runtime/wsf_core_runtime/xio:
+        dir_name: XIO 跨进程通信子系统
+        title: XIO 跨进程通信子系统
+        scope:
+            - swdev/src/core/wsf/source/xio/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/xio_sim
+            - path: simulation_framework_demos
+    core_engine/core_runtime/wsf_core_runtime/xio_sim:
+        dir_name: WSF XIO 仿真桥接层
+        title: WSF XIO 仿真桥接层
+        scope:
+            - swdev/src/core/wsf/source/xio_sim/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/xio
+            - path: tools/chugger/server
+    core_engine/core_runtime/wsf_cyber:
+        dir_name: AFSIM 网络战（Cyber）仿真扩展
+        title: AFSIM 网络战（Cyber）仿真扩展
+        scope:
+            - swdev/src/core/wsf_cyber/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_mil
+            - path: core_engine/weapons_warlock/warlock_plugins/cyber_engagement
+            - path: electronic_warfare_demos
+            - path: iads_and_c2_demos
+    core_engine/core_runtime/wsf_grammar_check:
+        dir_name: WSF 语法校验扩展库
+        title: WSF 语法校验扩展库
+        scope:
+            - swdev/src/core/wsf_grammar_check/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_parser
+    core_engine/core_runtime/wsf_l16:
+        dir_name: Link-16 (JTIDS) 通信仿真模块
+        title: Link-16 (JTIDS) 通信仿真模块
+        scope:
+            - swdev/src/core/wsf_l16/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/comm
+            - path: core_engine/weapons_warlock/warlock_plugins/communication_chat
+            - path: iads_and_c2_demos
+            - path: missile_and_weapons_demos
+    core_engine/core_runtime/wsf_mil:
+        dir_name: WSF MIL 仿真扩展库（传感器_武器_电子战_通信）
+        title: WSF MIL 仿真扩展库（传感器/武器/电子战/通信）
+        scope:
+            - swdev/src/core/wsf_mil/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_cyber
+            - path: core_engine/core_runtime/wsf_nx
+    core_engine/core_runtime/wsf_mil_parser:
+        dir_name: MIL-STD 2525C 武器_平台 XML 解析器
+        title: MIL-STD 2525C 武器/平台 XML 解析器
+        scope:
+            - swdev/src/core/wsf_mil_parser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_parser
+            - path: missile_and_weapons_demos
+            - path: scenario_examples
+            - path: tools/conversion_helpers
+    core_engine/core_runtime/wsf_mtt:
+        dir_name: WSF MTT 多目标跟踪器（Suppressor 7 算法移植）
+        title: WSF MTT 多目标跟踪器（Suppressor 7 算法移植）
+        scope:
+            - swdev/src/core/wsf_mtt/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/tracking_filters
+            - path: sensor_and_radar_demos
+    core_engine/core_runtime/wsf_nx:
+        dir_name: WSF_NX 扩展仿真组件库（箔条、雷达信号处理与 ALARM_EARCE 电磁模型）
+        title: WSF_NX 扩展仿真组件库（箔条、雷达信号处理与 ALARM/EARCE 电磁模型）
+        scope:
+            - swdev/src/core/wsf_nx/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_mil
+            - path: electronic_warfare_demos
+            - path: sensor_and_radar_demos
+    core_engine/core_runtime/wsf_parser:
+        dir_name: WSF 语法解析与代理树引擎
+        title: WSF 语法解析与代理树引擎
+        scope:
+            - swdev/src/core/wsf_parser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_grammar_check
+            - path: core_engine/core_runtime/wsf_mil_parser
+            - path: core_engine/core_runtime/wsf_sensor_plot_lib
+            - path: scenario_examples
+            - path: tools/conversion_helpers
+    core_engine/core_runtime/wsf_sensor_plot_lib:
+        dir_name: 传感器绘图库（Sensor Plot Library）
+        title: 传感器绘图库（Sensor Plot Library）
+        scope:
+            - swdev/src/core/sensor_plot_lib/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_parser
+            - path: core_engine/visualization_gui/sensor_plot
+            - path: core_engine/visualization_gui/wizard/visualization_plotting_plugins/pattern_visualization
+    core_engine/core_runtime/wsf_util:
+        dir_name: WSF 通用工具库（序列化、UTML 解析与基础算法）
+        title: WSF 通用工具库（序列化、UTML 解析与基础算法）
+        scope:
+            - swdev/src/core/wsf_util/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/event_pipe
+            - path: core_engine/shared_tools/genio
+            - path: tools/conversion_helpers
+            - path: tools/pyrunplotter
+    core_engine/core_runtime/wsf_weapon_server:
+        dir_name: 武器仿真服务器 (WSF Weapon Server)
+        title: 武器仿真服务器 (WSF Weapon Server)
+        scope:
+            - swdev/src/core/wsf_weapon_server/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/dis
+            - path: core_engine/shared_tools/packetio
+            - path: core_engine/weapons_warlock/warlock_plugins/weapon_system
+            - path: missile_and_weapons_demos
+    core_engine/documentation:
+        dir_name: AFSIM 文档源与变更日志
+        title: AFSIM 文档源与变更日志
+        scope:
+            - swdev/src/doc/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/event_mission_runtime:
+        dir_name: 事件_任务执行与可视化运行时（evt_reader、mission、mystic）
+        title: 事件/任务执行与可视化运行时（evt_reader、mission、mystic）
+        scope:
+            - swdev/src/evt_reader/
+            - swdev/src/mission/
+            - swdev/src/mystic/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime
+            - path: core_engine/visualization_gui/post_processor
+            - path: core_engine/visualization_gui/wizard/analysis_tools_plugins/scenario_analyzer
+            - path: core_engine/visualization_gui/wizard/launcher_viewer_plugins
+            - path: tools/chugger
+    core_engine/platform_models:
+        dir_name: 平台模型工具集：Engage 评估器与 Mover Creator 设计器
+        title: 平台模型工具集：Engage 评估器与 Mover Creator 设计器
+        scope:
+            - swdev/src/engage/
+            - swdev/src/mover_creator/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/visualization_gui/wizard/scenario_simulation_plugins/engage
+    core_engine/shared_tools:
+        dir_name: AFSIM 核心工具与共享库集合
+        title: AFSIM 核心工具与共享库集合
+        scope:
+            - swdev/src/tools/
+        source_files: []
+        children:
+            - core_engine/shared_tools/artificer
+            - core_engine/shared_tools/dis
+            - core_engine/shared_tools/genio
+            - core_engine/shared_tools/geodata
+            - core_engine/shared_tools/misc_build_scripts
+            - core_engine/shared_tools/packetio
+            - core_engine/shared_tools/profiling
+            - core_engine/shared_tools/scene_gen
+            - core_engine/shared_tools/tracking_filters
+            - core_engine/shared_tools/util
+            - core_engine/shared_tools/util_script
+            - core_engine/shared_tools/utilosg
+            - core_engine/shared_tools/utilqt
+            - core_engine/shared_tools/vespatk
+            - core_engine/shared_tools/wkf
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/artificer:
+        dir_name: AFSIM Afperf 数据转换工具 (Artificer)
+        title: AFSIM Afperf 数据转换工具 (Artificer)
+        scope:
+            - swdev/src/tools/artificer/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: tools/conversion_helpers
+    core_engine/shared_tools/dis:
+        dir_name: DIS 协议库（IEEE 1278.1 仿真互操作）
+        title: DIS 协议库（IEEE 1278.1 仿真互操作）
+        scope:
+            - swdev/src/tools/dis/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_weapon_server
+            - path: core_engine/shared_tools/packetio
+    core_engine/shared_tools/genio:
+        dir_name: GenIO 通用 I_O 与网络传输库
+        title: GenIO 通用 I/O 与网络传输库
+        scope:
+            - swdev/src/tools/genio/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_util
+            - path: core_engine/shared_tools/packetio
+    core_engine/shared_tools/geodata:
+        dir_name: 地理数据瓦片与高程_影像加载引擎
+        title: 地理数据瓦片与高程/影像加载引擎
+        scope:
+            - swdev/src/tools/geodata/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/visualization_gui/wizard/map_display_plugins
+    core_engine/shared_tools/misc_build_scripts:
+        dir_name: 构建辅助脚本与第三方依赖 CMake 集成
+        title: 构建辅助脚本与第三方依赖 CMake 集成
+        scope:
+            - swdev/src/tools/misc/
+            - swdev/src/tools/3rd_party-cmake/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/packetio:
+        dir_name: AFSIM 数据包序列化与网络 I_O 框架 (packetio)
+        title: AFSIM 数据包序列化与网络 I/O 框架 (packetio)
+        scope:
+            - swdev/src/tools/packetio/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_weapon_server
+            - path: core_engine/shared_tools/dis
+            - path: core_engine/shared_tools/genio
+    core_engine/shared_tools/profiling:
+        dir_name: AFSIM 运行时性能剖析框架 (Profiling)
+        title: AFSIM 运行时性能剖析框架 (Profiling)
+        scope:
+            - swdev/src/tools/profiling/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: tools/conversion_helpers
+    core_engine/shared_tools/scene_gen:
+        dir_name: AFSIM 场景脚本生成器 (Scene Generator)
+        title: AFSIM 场景脚本生成器 (Scene Generator)
+        scope:
+            - swdev/src/tools/scene_gen/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: simulation_framework_demos
+    core_engine/shared_tools/tracking_filters:
+        dir_name: 跟踪滤波算法库（Tracking Filters）
+        title: 跟踪滤波算法库（Tracking Filters）
+        scope:
+            - swdev/src/tools/tracking_filters/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_mtt
+    core_engine/shared_tools/util:
+        dir_name: AFSIM 通用工具库 (util)
+        title: AFSIM 通用工具库 (util)
+        scope:
+            - swdev/src/tools/util/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/util_script:
+        dir_name: AFSIM 脚本语言引擎 (UtScript)
+        title: AFSIM 脚本语言引擎 (UtScript)
+        scope:
+            - swdev/src/tools/util_script/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/script
+    core_engine/shared_tools/utilosg:
+        dir_name: UTOSG 可视化引擎核心库
+        title: UTOSG 可视化引擎核心库
+        scope:
+            - swdev/src/tools/utilosg/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/vespatk
+    core_engine/shared_tools/utilqt:
+        dir_name: Qt 通用工具与可视化组件库 (utilqt)
+        title: Qt 通用工具与可视化组件库 (utilqt)
+        scope:
+            - swdev/src/tools/utilqt/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/visualization_gui/wizard/wizard_core
+    core_engine/shared_tools/vespatk:
+        dir_name: VespaTK 仿真可视化框架
+        title: VespaTK 仿真可视化框架
+        scope:
+            - swdev/src/tools/vespatk/
+        source_files: []
+        children:
+            - core_engine/shared_tools/vespatk/assets
+            - core_engine/shared_tools/vespatk/common_build
+            - core_engine/shared_tools/vespatk/core_source
+            - core_engine/shared_tools/vespatk/qt_integration
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/utilosg
+    core_engine/shared_tools/vespatk/assets:
+        dir_name: Vespatk 渲染资源与着色器库
+        title: Vespatk 渲染资源与着色器库
+        scope:
+            - swdev/src/tools/vespatk/data/
+            - swdev/src/tools/vespatk/models/
+            - swdev/src/tools/vespatk/shaders/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/vespatk/common_build:
+        dir_name: VespaTK 通用构建与资源安装基础设施
+        title: VespaTK 通用构建与资源安装基础设施
+        scope:
+            - swdev/src/tools/vespatk/common/
+            - swdev/src/tools/vespatk/cmake/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/vespatk/core_source:
+        dir_name: Vespa 可视化引擎核心源库
+        title: Vespa 可视化引擎核心源库
+        scope:
+            - swdev/src/tools/vespatk/source/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/vespatk/qt_integration:
+        dir_name: VespaTK Qt 集成层
+        title: VespaTK Qt 集成层
+        scope:
+            - swdev/src/tools/vespatk/vespatk_qt/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf:
+        dir_name: WKF 工具框架（Workstation Kernel Framework）
+        title: WKF 工具框架（Workstation Kernel Framework）
+        scope:
+            - swdev/src/tools/wkf/
+        source_files: []
+        children:
+            - core_engine/shared_tools/wkf/air_combat
+            - core_engine/shared_tools/wkf/comm_vis
+            - core_engine/shared_tools/wkf/common_plugins
+            - core_engine/shared_tools/wkf/core
+            - core_engine/shared_tools/wkf/standalone_plugins
+            - core_engine/shared_tools/wkf/wsfg_spaceg
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_exec
+    core_engine/shared_tools/wkf/air_combat:
+        dir_name: 空战可视化 WKF 插件库 (wkf_air_combat_common)
+        title: 空战可视化 WKF 插件库 (wkf_air_combat_common)
+        scope:
+            - swdev/src/tools/wkf/air_combat/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/comm_vis:
+        dir_name: 通信可视化共享库 (wkf_comm_vis_common)
+        title: 通信可视化共享库 (wkf_comm_vis_common)
+        scope:
+            - swdev/src/tools/wkf/comm_vis/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins:
+        dir_name: WKF 通用插件集合（common_plugins）
+        title: WKF 通用插件集合（common_plugins）
+        scope:
+            - swdev/src/tools/wkf/common/
+        source_files: []
+        children:
+            - core_engine/shared_tools/wkf/common_plugins/annotation_poi
+            - core_engine/shared_tools/wkf/common_plugins/comment_logging
+            - core_engine/shared_tools/wkf/common_plugins/interaction_event_marker_visual_effect
+            - core_engine/shared_tools/wkf/common_plugins/orbits_satellite_tether
+            - core_engine/shared_tools/wkf/common_plugins/particle_system
+            - core_engine/shared_tools/wkf/common_plugins/platform_history_selectors
+            - core_engine/shared_tools/wkf/common_plugins/plugin_docs_and_ui
+            - core_engine/shared_tools/wkf/common_plugins/sensor_volumes_wsf_draw_misc
+            - core_engine/shared_tools/wkf/common_plugins/visibility_filter_statistics
+            - core_engine/shared_tools/wkf/common_plugins/zones_routes_platform_browser
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/annotation_poi:
+        dir_name: 标注与环形附件可视化插件
+        title: 标注与环形附件可视化插件
+        scope:
+            - swdev/src/tools/wkf/common/source/annotation/
+            - swdev/src/tools/wkf/common/source/data_ring/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/comment_logging:
+        dir_name: 注释与日志显示插件（Comment & Logging UI）
+        title: 注释与日志显示插件（Comment & Logging UI）
+        scope:
+            - swdev/src/tools/wkf/common/source/comment/
+            - swdev/src/tools/wkf/common/source/logging/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/interaction_event_marker_visual_effect:
+        dir_name: 交互、事件标记与视觉特效可视化插件框架
+        title: 交互、事件标记与视觉特效可视化插件框架
+        scope:
+            - swdev/src/tools/wkf/common/source/interaction/
+            - swdev/src/tools/wkf/common/source/event_marker/
+            - swdev/src/tools/wkf/common/source/visual_effect/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/orbits_satellite_tether:
+        dir_name: 轨道与卫星系绳可视化插件
+        title: 轨道与卫星系绳可视化插件
+        scope:
+            - swdev/src/tools/wkf/common/source/orbit/
+            - swdev/src/tools/wkf/common/source/satellite_tether/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/particle_system:
+        dir_name: WKF 粒子系统扩展（屏幕缩放与实时时间驱动）
+        title: WKF 粒子系统扩展（屏幕缩放与实时时间驱动）
+        scope:
+            - swdev/src/tools/wkf/common/source/particle_system/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/platform_history_selectors:
+        dir_name: 平台历史偏好、选择器与平台浏览器 UI 组件
+        title: 平台历史偏好、选择器与平台浏览器 UI 组件
+        scope:
+            - swdev/src/tools/wkf/common/source/platform_history/
+            - swdev/src/tools/wkf/common/source/selectors/
+            - swdev/src/tools/wkf/common/source/platform_browser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/plugin_docs_and_ui:
+        dir_name: WKF 插件文档与 Qt UI 资源
+        title: WKF 插件文档与 Qt UI 资源
+        scope:
+            - swdev/src/tools/wkf/common/doc/
+            - swdev/src/tools/wkf/common/ui/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/sensor_volumes_wsf_draw_misc:
+        dir_name: 传感器体积可视化、WSF 叠加绘图与杂项 UI 工具集
+        title: 传感器体积可视化、WSF 叠加绘图与杂项 UI 工具集
+        scope:
+            - swdev/src/tools/wkf/common/source/sensor_volume/
+            - swdev/src/tools/wkf/common/source/wsf_draw/
+            - swdev/src/tools/wkf/common/source/misc/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/visibility_filter_statistics:
+        dir_name: WKF 可见性过滤与态势统计 UI 组件
+        title: WKF 可见性过滤与态势统计 UI 组件
+        scope:
+            - swdev/src/tools/wkf/common/source/visibility/
+            - swdev/src/tools/wkf/common/source/filter_widget/
+            - swdev/src/tools/wkf/common/source/statistics/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/common_plugins/zones_routes_platform_browser:
+        dir_name: 区域与航线可视化浏览器插件
+        title: 区域与航线可视化浏览器插件
+        scope:
+            - swdev/src/tools/wkf/common/source/zone/
+            - swdev/src/tools/wkf/common/source/route/
+            - swdev/src/tools/wkf/common/source/zone_browser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/core:
+        dir_name: WKF 核心可视化框架库
+        title: WKF 核心可视化框架库
+        scope:
+            - swdev/src/tools/wkf/core/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/standalone_plugins:
+        dir_name: WKF 独立插件集合（standalone_plugins）
+        title: WKF 独立插件集合（standalone_plugins）
+        scope:
+            - swdev/src/tools/wkf/plugins/
+        source_files: []
+        children:
+            - core_engine/shared_tools/wkf/standalone_plugins/analysis_video_plugins
+            - core_engine/shared_tools/wkf/standalone_plugins/converter_tool_plugins
+            - core_engine/shared_tools/wkf/standalone_plugins/map_display_plugins
+            - core_engine/shared_tools/wkf/standalone_plugins/visibility_tether_plugins
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/standalone_plugins/analysis_video_plugins:
+        dir_name: WKF 分析型独立插件集（性能_地形工具_视频录制）
+        title: WKF 分析型独立插件集（性能/地形工具/视频录制）
+        scope:
+            - swdev/src/tools/wkf/plugins/Performance/
+            - swdev/src/tools/wkf/plugins/TerrainTools/
+            - swdev/src/tools/wkf/plugins/VideoCapture/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/standalone_plugins/converter_tool_plugins:
+        dir_name: WKF 坐标与单位转换工具插件
+        title: WKF 坐标与单位转换工具插件
+        scope:
+            - swdev/src/tools/wkf/plugins/PositionConverterTool/
+            - swdev/src/tools/wkf/plugins/UnitConverterTool/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/standalone_plugins/map_display_plugins:
+        dir_name: 地图显示与覆盖层插件集合
+        title: 地图显示与覆盖层插件集合
+        scope:
+            - swdev/src/tools/wkf/plugins/CoverageOverlay/
+            - swdev/src/tools/wkf/plugins/MapDisplay/
+            - swdev/src/tools/wkf/plugins/MapHoverInfo/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/standalone_plugins/visibility_tether_plugins:
+        dir_name: WKF 可视化辅助插件集（TetherView _ Visibility _ ModelBrowser）
+        title: WKF 可视化辅助插件集（TetherView / Visibility / ModelBrowser）
+        scope:
+            - swdev/src/tools/wkf/plugins/TetherView/
+            - swdev/src/tools/wkf/plugins/Visibility/
+            - swdev/src/tools/wkf/plugins/ModelBrowser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/shared_tools/wkf/wsfg_spaceg:
+        dir_name: Astrolabe 空间任务可视化与配置工具库
+        title: Astrolabe 空间任务可视化与配置工具库
+        scope:
+            - swdev/src/tools/wkf/wsfg/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/visualization_gui/wizard/analysis_tools_plugins/space_tools
+    core_engine/visualization_gui:
+        dir_name: AFSIM 可视化与后处理 GUI 套件
+        title: AFSIM 可视化与后处理 GUI 套件
+        scope:
+            - swdev/src/post_processor/
+            - swdev/src/sensor_plot/
+            - swdev/src/wizard/
+        source_files: []
+        children:
+            - core_engine/visualization_gui/post_processor
+            - core_engine/visualization_gui/sensor_plot
+            - core_engine/visualization_gui/wizard
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/post_processor:
+        dir_name: AFSIM Post-Processor（GUI 插件与命令行工具）
+        title: AFSIM Post-Processor（GUI 插件与命令行工具）
+        scope:
+            - swdev/src/post_processor/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/event_pipe
+            - path: core_engine/event_mission_runtime
+    core_engine/visualization_gui/sensor_plot:
+        dir_name: 传感器绘图命令行工具 (sensor_plot)
+        title: 传感器绘图命令行工具 (sensor_plot)
+        scope:
+            - swdev/src/sensor_plot/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_sensor_plot_lib
+            - path: core_engine/visualization_gui/wizard/visualization_plotting_plugins/splat_plotting
+    core_engine/visualization_gui/wizard:
+        dir_name: AFSIM Wizard 可视化框架与插件生态
+        title: AFSIM Wizard 可视化框架与插件生态
+        scope:
+            - swdev/src/wizard/
+        source_files: []
+        children:
+            - core_engine/visualization_gui/wizard/analysis_tools_plugins
+            - core_engine/visualization_gui/wizard/browser_plugins
+            - core_engine/visualization_gui/wizard/event_logging_plugins
+            - core_engine/visualization_gui/wizard/importer_plugins
+            - core_engine/visualization_gui/wizard/launcher_viewer_plugins
+            - core_engine/visualization_gui/wizard/map_display_plugins
+            - core_engine/visualization_gui/wizard/map_route_tools
+            - core_engine/visualization_gui/wizard/misc_plugins
+            - core_engine/visualization_gui/wizard/model_scenario_importers
+            - core_engine/visualization_gui/wizard/project_browser_plugins
+            - core_engine/visualization_gui/wizard/route_platform_browsers
+            - core_engine/visualization_gui/wizard/scenario_simulation_plugins
+            - core_engine/visualization_gui/wizard/unit_converter_tool
+            - core_engine/visualization_gui/wizard/usmtf_model
+            - core_engine/visualization_gui/wizard/utility_plugins
+            - core_engine/visualization_gui/wizard/video_capture_plugin
+            - core_engine/visualization_gui/wizard/visualization_plotting_plugins
+            - core_engine/visualization_gui/wizard/wizard_core
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/analysis_tools_plugins:
+        dir_name: AFSIM Wizard 可视化分析插件集合（ScenarioAnalyzer _ SpaceTools _ Visibility）
+        title: AFSIM Wizard 可视化分析插件集合（ScenarioAnalyzer / SpaceTools / Visibility）
+        scope:
+            - swdev/src/wizard/plugins/ScenarioAnalyzer/
+            - swdev/src/wizard/plugins/SpaceTools/
+            - swdev/src/wizard/plugins/Visibility/
+        source_files: []
+        children:
+            - core_engine/visualization_gui/wizard/analysis_tools_plugins/scenario_analyzer
+            - core_engine/visualization_gui/wizard/analysis_tools_plugins/space_tools
+            - core_engine/visualization_gui/wizard/analysis_tools_plugins/visibility
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/analysis_tools_plugins/scenario_analyzer:
+        dir_name: ScenarioAnalyzer Wizard 插件（场景检查与结果分析）
+        title: ScenarioAnalyzer Wizard 插件（场景检查与结果分析）
+        scope:
+            - swdev/src/wizard/plugins/ScenarioAnalyzer/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/event_mission_runtime
+    core_engine/visualization_gui/wizard/analysis_tools_plugins/space_tools:
+        dir_name: SpaceTools Wizard 插件（星座生成器、星盘与卫星插入器）
+        title: SpaceTools Wizard 插件（星座生成器、星盘与卫星插入器）
+        scope:
+            - swdev/src/wizard/plugins/SpaceTools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/wkf/wsfg_spaceg
+            - path: space_and_satellite_demos
+    core_engine/visualization_gui/wizard/analysis_tools_plugins/visibility:
+        dir_name: Visibility 插件构建与文档骨架
+        title: Visibility 插件构建与文档骨架
+        scope:
+            - swdev/src/wizard/plugins/Visibility/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/browser_plugins:
+        dir_name: Wizard 浏览器类插件集合（CommandChain _ Demo _ Model）
+        title: Wizard 浏览器类插件集合（CommandChain / Demo / Model）
+        scope:
+            - swdev/src/wizard/plugins/CommandChainBrowser/
+            - swdev/src/wizard/plugins/DemoBrowser/
+            - swdev/src/wizard/plugins/ModelBrowser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/event_logging_plugins:
+        dir_name: 事件输出_日志服务器_错误列表可视化插件
+        title: 事件输出/日志服务器/错误列表可视化插件
+        scope:
+            - swdev/src/wizard/plugins/EventOutput/
+            - swdev/src/wizard/plugins/LogServer/
+            - swdev/src/wizard/plugins/ErrorList/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/observer
+    core_engine/visualization_gui/wizard/importer_plugins:
+        dir_name: 向导导入器插件集（ACO_CRD_OSM）
+        title: 向导导入器插件集（ACO/CRD/OSM）
+        scope:
+            - swdev/src/wizard/plugins/ACOImporter/
+            - swdev/src/wizard/plugins/CRDImporter/
+            - swdev/src/wizard/plugins/OSMConverter/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/traffic
+    core_engine/visualization_gui/wizard/launcher_viewer_plugins:
+        dir_name: Wizard 外部工具集成插件集（MysticLauncher _ SIMDIS _ TetherView）
+        title: Wizard 外部工具集成插件集（MysticLauncher / SIMDIS / TetherView）
+        scope:
+            - swdev/src/wizard/plugins/MysticLauncher/
+            - swdev/src/wizard/plugins/SIMDIS/
+            - swdev/src/wizard/plugins/TetherView/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/event_mission_runtime
+    core_engine/visualization_gui/wizard/map_display_plugins:
+        dir_name: 地图可视化插件集合（MapDisplay_MapAnnotation_MapHoverInfo）
+        title: 地图可视化插件集合（MapDisplay/MapAnnotation/MapHoverInfo）
+        scope:
+            - swdev/src/wizard/plugins/MapDisplay/
+            - swdev/src/wizard/plugins/MapAnnotation/
+            - swdev/src/wizard/plugins/MapHoverInfo/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/geodata
+    core_engine/visualization_gui/wizard/map_route_tools:
+        dir_name: 地图路线与场景编辑插件集合
+        title: 地图路线与场景编辑插件集合
+        scope:
+            - swdev/src/wizard/plugins/MapRoute/
+            - swdev/src/wizard/plugins/MapUtils/
+            - swdev/src/wizard/plugins/ZoneEditor/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/misc_plugins:
+        dir_name: Wizard 辅助插件构建与文档骨架（CoverageOverlay _ Performance _ TerrainTools）
+        title: Wizard 辅助插件构建与文档骨架（CoverageOverlay / Performance / TerrainTools）
+        scope:
+            - swdev/src/wizard/plugins/CoverageOverlay/
+            - swdev/src/wizard/plugins/Performance/
+            - swdev/src/wizard/plugins/TerrainTools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/model_scenario_importers:
+        dir_name: AFSIM Wizard 可视化与导入插件集合
+        title: AFSIM Wizard 可视化与导入插件集合
+        scope:
+            - swdev/src/wizard/plugins/ModelImport/
+            - swdev/src/wizard/plugins/ScenarioImporter/
+            - swdev/src/wizard/plugins/CommVis/
+        source_files: []
+        children:
+            - core_engine/visualization_gui/wizard/model_scenario_importers/comm_vis
+            - core_engine/visualization_gui/wizard/model_scenario_importers/model_import
+            - core_engine/visualization_gui/wizard/model_scenario_importers/scenario_importer
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/model_scenario_importers/comm_vis:
+        dir_name: 通信拓扑可视化 Wizard 插件 (CommVis)
+        title: 通信拓扑可视化 Wizard 插件 (CommVis)
+        scope:
+            - swdev/src/wizard/plugins/CommVis/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/model_scenario_importers/model_import:
+        dir_name: 模型导入向导插件（ModelImport）
+        title: 模型导入向导插件（ModelImport）
+        scope:
+            - swdev/src/wizard/plugins/ModelImport/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: simulation_framework_demos
+    core_engine/visualization_gui/wizard/model_scenario_importers/scenario_importer:
+        dir_name: 场景导入器向导插件（Scenario Importer）
+        title: 场景导入器向导插件（Scenario Importer）
+        scope:
+            - swdev/src/wizard/plugins/ScenarioImporter/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: tools/conversion_helpers
+    core_engine/visualization_gui/wizard/project_browser_plugins:
+        dir_name: Wizard 项目_平台_类型浏览器插件
+        title: Wizard 项目/平台/类型浏览器插件
+        scope:
+            - swdev/src/wizard/plugins/ProjectBrowser/
+            - swdev/src/wizard/plugins/PlatformBrowser/
+            - swdev/src/wizard/plugins/TypeBrowser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/route_platform_browsers:
+        dir_name: AFSIM Wizard 可视化插件集合（RouteBrowser _ PlatformData _ PartManager）
+        title: AFSIM Wizard 可视化插件集合（RouteBrowser / PlatformData / PartManager）
+        scope:
+            - swdev/src/wizard/plugins/RouteBrowser/
+            - swdev/src/wizard/plugins/PlatformData/
+            - swdev/src/wizard/plugins/PartManager/
+        source_files: []
+        children:
+            - core_engine/visualization_gui/wizard/route_platform_browsers/part_manager
+            - core_engine/visualization_gui/wizard/route_platform_browsers/platform_data
+            - core_engine/visualization_gui/wizard/route_platform_browsers/route_browser
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/route_platform_browsers/part_manager:
+        dir_name: PartManager Wizard 插件（平台部件可视化浏览器）
+        title: PartManager Wizard 插件（平台部件可视化浏览器）
+        scope:
+            - swdev/src/wizard/plugins/PartManager/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/route_platform_browsers/platform_data:
+        dir_name: 平台数据可视化向导插件
+        title: 平台数据可视化向导插件
+        scope:
+            - swdev/src/wizard/plugins/PlatformData/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/route_platform_browsers/route_browser:
+        dir_name: 向导 Route Browser 插件
+        title: 向导 Route Browser 插件
+        scope:
+            - swdev/src/wizard/plugins/RouteBrowser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/scenario_simulation_plugins:
+        dir_name: AFSIM Wizard 场景仿真与任务管理插件集
+        title: AFSIM Wizard 场景仿真与任务管理插件集
+        scope:
+            - swdev/src/wizard/plugins/SimulationManager/
+            - swdev/src/wizard/plugins/TaskList/
+            - swdev/src/wizard/plugins/Engage/
+        source_files: []
+        children:
+            - core_engine/visualization_gui/wizard/scenario_simulation_plugins/engage
+            - core_engine/visualization_gui/wizard/scenario_simulation_plugins/simulation_manager
+            - core_engine/visualization_gui/wizard/scenario_simulation_plugins/task_list
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/scenario_simulation_plugins/engage:
+        dir_name: WizEngage 仿真交战场景配置插件
+        title: WizEngage 仿真交战场景配置插件
+        scope:
+            - swdev/src/wizard/plugins/Engage/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/platform_models
+    core_engine/visualization_gui/wizard/scenario_simulation_plugins/simulation_manager:
+        dir_name: 仿真管理器与脚本调试器插件
+        title: 仿真管理器与脚本调试器插件
+        scope:
+            - swdev/src/wizard/plugins/SimulationManager/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/scenario_simulation_plugins/task_list:
+        dir_name: Wizard 任务列表插件 (TaskList)
+        title: Wizard 任务列表插件 (TaskList)
+        scope:
+            - swdev/src/wizard/plugins/TaskList/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/unit_converter_tool:
+        dir_name: 单位转换工具插件（UnitConverterTool）
+        title: 单位转换工具插件（UnitConverterTool）
+        scope:
+            - swdev/src/wizard/plugins/UnitConverterTool/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/usmtf_model:
+        dir_name: USMTF 格式化消息解析与生成库
+        title: USMTF 格式化消息解析与生成库
+        scope:
+            - swdev/src/wizard/usmtf/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/utility_plugins:
+        dir_name: Wizard 编辑器辅助插件（颜色工具、单位换算、坐标转换）
+        title: Wizard 编辑器辅助插件（颜色工具、单位换算、坐标转换）
+        scope:
+            - swdev/src/wizard/plugins/ColorUtils/
+            - swdev/src/wizard/plugins/UnitConversion/
+            - swdev/src/wizard/plugins/PositionConverterTool/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/video_capture_plugin:
+        dir_name: VideoCapture Wizard 插件构建与文档
+        title: VideoCapture Wizard 插件构建与文档
+        scope:
+            - swdev/src/wizard/plugins/VideoCapture/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/visualization_plotting_plugins:
+        dir_name: AFSIM Wizard 可视化插件集合（PatternVisualization _ SPLAT _ TablePlotter）
+        title: AFSIM Wizard 可视化插件集合（PatternVisualization / SPLAT / TablePlotter）
+        scope:
+            - swdev/src/wizard/plugins/PatternVisualization/
+            - swdev/src/wizard/plugins/SPLAT/
+            - swdev/src/wizard/plugins/TablePlotter/
+        source_files: []
+        children:
+            - core_engine/visualization_gui/wizard/visualization_plotting_plugins/pattern_visualization
+            - core_engine/visualization_gui/wizard/visualization_plotting_plugins/splat_plotting
+            - core_engine/visualization_gui/wizard/visualization_plotting_plugins/table_plotter
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/visualization_plotting_plugins/pattern_visualization:
+        dir_name: 天线方向图可视化插件（Pattern Visualization）
+        title: 天线方向图可视化插件（Pattern Visualization）
+        scope:
+            - swdev/src/wizard/plugins/PatternVisualization/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_sensor_plot_lib
+            - path: sensor_and_radar_demos
+    core_engine/visualization_gui/wizard/visualization_plotting_plugins/splat_plotting:
+        dir_name: SPLAT 传感器绘图向导插件
+        title: SPLAT 传感器绘图向导插件
+        scope:
+            - swdev/src/wizard/plugins/SPLAT/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/visualization_gui/sensor_plot
+    core_engine/visualization_gui/wizard/visualization_plotting_plugins/table_plotter:
+        dir_name: 表格数据可视化插件（TablePlotter）
+        title: 表格数据可视化插件（TablePlotter）
+        scope:
+            - swdev/src/wizard/plugins/TablePlotter/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/visualization_gui/wizard/wizard_core:
+        dir_name: AFSIM Wizard 核心引擎与主程序
+        title: AFSIM Wizard 核心引擎与主程序
+        scope:
+            - swdev/src/wizard/main/
+            - swdev/src/wizard/lib/
+            - swdev/src/wizard/data/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/utilqt
+    core_engine/weapons_warlock:
+        dir_name: Warlock CUI 与武器工具集（warlock + weapon_tools）
+        title: Warlock CUI 与武器工具集（warlock + weapon_tools）
+        scope:
+            - swdev/src/warlock/
+            - swdev/src/weapon_tools/
+        source_files: []
+        children:
+            - core_engine/weapons_warlock/warlock_core
+            - core_engine/weapons_warlock/warlock_exec
+            - core_engine/weapons_warlock/warlock_plugins
+            - core_engine/weapons_warlock/weapon_tools
+        depends_on: []
+        related_to: []
+    core_engine/weapons_warlock/warlock_core:
+        dir_name: Warlock 核心库 (warlock_core)
+        title: Warlock 核心库 (warlock_core)
+        scope:
+            - swdev/src/warlock/warlock_core/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/weapons_warlock/warlock_exec:
+        dir_name: Warlock 可执行程序入口与 WSF 应用扩展
+        title: Warlock 可执行程序入口与 WSF 应用扩展
+        scope:
+            - swdev/src/warlock/warlock_exec/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/shared_tools/wkf
+            - path: core_engine/weapons_warlock/warlock_plugins
+    core_engine/weapons_warlock/warlock_plugins:
+        dir_name: Warlock CUI 插件集合（warlock_plugins）
+        title: Warlock CUI 插件集合（warlock/plugins）
+        scope:
+            - swdev/src/warlock/plugins/
+        source_files: []
+        children:
+            - core_engine/weapons_warlock/warlock_plugins/cockpit_displays
+            - core_engine/weapons_warlock/warlock_plugins/communication_chat
+            - core_engine/weapons_warlock/warlock_plugins/cyber_engagement
+            - core_engine/weapons_warlock/warlock_plugins/input_devices
+            - core_engine/weapons_warlock/warlock_plugins/logging_marking
+            - core_engine/weapons_warlock/warlock_plugins/map_and_projection
+            - core_engine/weapons_warlock/warlock_plugins/mission_tasking
+            - core_engine/weapons_warlock/warlock_plugins/orbital_satellite
+            - core_engine/weapons_warlock/warlock_plugins/p6dof_flight
+            - core_engine/weapons_warlock/warlock_plugins/platform_management
+            - core_engine/weapons_warlock/warlock_plugins/scripting_tools
+            - core_engine/weapons_warlock/warlock_plugins/sensor_system
+            - core_engine/weapons_warlock/warlock_plugins/sim_runtime
+            - core_engine/weapons_warlock/warlock_plugins/sixdof_flight
+            - core_engine/weapons_warlock/warlock_plugins/track_analysis
+            - core_engine/weapons_warlock/warlock_plugins/utilities_stubs
+            - core_engine/weapons_warlock/warlock_plugins/visualization_effects
+            - core_engine/weapons_warlock/warlock_plugins/weapon_system
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_exec
+    core_engine/weapons_warlock/warlock_plugins/cockpit_displays:
+        dir_name: Warlock 座舱显示插件集合（HUD_HDD_ACES_态势感知）
+        title: Warlock 座舱显示插件集合（HUD/HDD/ACES/态势感知）
+        scope:
+            - swdev/src/warlock/plugins/HeadUpView/
+            - swdev/src/warlock/plugins/HeadDownView/
+            - swdev/src/warlock/plugins/AcesDisplay/
+            - swdev/src/warlock/plugins/SituationAwarenessDisplay/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_plugins/input_devices
+    core_engine/weapons_warlock/warlock_plugins/communication_chat:
+        dir_name: 网络通信与聊天插件集（Chat _ NetworkBrowser _ NetworkLog）
+        title: 网络通信与聊天插件集（Chat / NetworkBrowser / NetworkLog）
+        scope:
+            - swdev/src/warlock/plugins/Chat/
+            - swdev/src/warlock/plugins/NetworkBrowser/
+            - swdev/src/warlock/plugins/NetworkLog/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_l16
+    core_engine/weapons_warlock/warlock_plugins/cyber_engagement:
+        dir_name: 网络对抗仿真交互插件（Cyber Engagement Browser & Controller）
+        title: 网络对抗仿真交互插件（Cyber Engagement Browser & Controller）
+        scope:
+            - swdev/src/warlock/plugins/CyberEngagementBrowser/
+            - swdev/src/warlock/plugins/CyberEngagementController/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_cyber
+            - path: core_engine/weapons_warlock/warlock_plugins/mission_tasking
+    core_engine/weapons_warlock/warlock_plugins/input_devices:
+        dir_name: Joystick 操纵杆输入设备插件
+        title: Joystick 操纵杆输入设备插件
+        scope:
+            - swdev/src/warlock/plugins/Joystick/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_plugins/cockpit_displays
+    core_engine/weapons_warlock/warlock_plugins/logging_marking:
+        dir_name: Warlock 日志与标注插件集（Log_Annotation_Comment_EventMarker）
+        title: Warlock 日志与标注插件集（Log/Annotation/Comment/EventMarker）
+        scope:
+            - swdev/src/warlock/plugins/Log/
+            - swdev/src/warlock/plugins/Annotation/
+            - swdev/src/warlock/plugins/Comment/
+            - swdev/src/warlock/plugins/EventMarker/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_plugins/visualization_effects
+    core_engine/weapons_warlock/warlock_plugins/map_and_projection:
+        dir_name: Warlock 地图显示与投影可视化插件集
+        title: Warlock 地图显示与投影可视化插件集
+        scope:
+            - swdev/src/warlock/plugins/MapDisplay/
+            - swdev/src/warlock/plugins/MapHoverInfo/
+            - swdev/src/warlock/plugins/ModelBrowser/
+            - swdev/src/warlock/plugins/Projector/
+            - swdev/src/warlock/plugins/WsfDraw/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_plugins/track_analysis
+    core_engine/weapons_warlock/warlock_plugins/mission_tasking:
+        dir_name: 任务编排与战况可视化插件集（Mission Tasking Plugins）
+        title: 任务编排与战况可视化插件集（Mission Tasking Plugins）
+        scope:
+            - swdev/src/warlock/plugins/BattleManagement/
+            - swdev/src/warlock/plugins/TaskAssigner/
+            - swdev/src/warlock/plugins/TaskStatus/
+            - swdev/src/warlock/plugins/Scoreboard/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_plugins/cyber_engagement
+    core_engine/weapons_warlock/warlock_plugins/orbital_satellite:
+        dir_name: 轨道与系绳可视化插件集合
+        title: 轨道与系绳可视化插件集合
+        scope:
+            - swdev/src/warlock/plugins/Orbit/
+            - swdev/src/warlock/plugins/OrbitalData/
+            - swdev/src/warlock/plugins/SatelliteTether/
+            - swdev/src/warlock/plugins/TetherView/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/weapons_warlock/warlock_plugins/p6dof_flight:
+        dir_name: P6DOF 飞行器控制与调参插件集
+        title: P6DOF 飞行器控制与调参插件集
+        scope:
+            - swdev/src/warlock/plugins/P6DOF_Controller/
+            - swdev/src/warlock/plugins/P6DOF_Data/
+            - swdev/src/warlock/plugins/P6DOF_Tuner/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/weapons_warlock/warlock_plugins/platform_management:
+        dir_name: 平台浏览器与可视化插件集合
+        title: 平台浏览器与可视化插件集合
+        scope:
+            - swdev/src/warlock/plugins/PlatformBrowser/
+            - swdev/src/warlock/plugins/PlatformData/
+            - swdev/src/warlock/plugins/PlatformMovement/
+            - swdev/src/warlock/plugins/PlatformHistory/
+            - swdev/src/warlock/plugins/CreatePlatform/
+            - swdev/src/warlock/plugins/PlatformPartBrowser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_plugins/sim_runtime
+    core_engine/weapons_warlock/warlock_plugins/scripting_tools:
+        dir_name: Warlock 脚本与对话框构建插件集
+        title: Warlock 脚本与对话框构建插件集
+        scope:
+            - swdev/src/warlock/plugins/ScriptBrowser/
+            - swdev/src/warlock/plugins/AdHocScriptBrowser/
+            - swdev/src/warlock/plugins/DialogBuilder/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/weapons_warlock/warlock_plugins/sensor_system:
+        dir_name: 传感器可视化与相对几何插件集合
+        title: 传感器可视化与相对几何插件集合
+        scope:
+            - swdev/src/warlock/plugins/SensorController/
+            - swdev/src/warlock/plugins/SensorVolumes/
+            - swdev/src/warlock/plugins/RelativeGeometry/
+            - swdev/src/warlock/plugins/Visibility/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/weapons_warlock/warlock_plugins/sim_runtime:
+        dir_name: 仿真运行时控制插件集（SimController _ DemoMode _ ApplicationLauncher）
+        title: 仿真运行时控制插件集（SimController / DemoMode / ApplicationLauncher）
+        scope:
+            - swdev/src/warlock/plugins/SimController/
+            - swdev/src/warlock/plugins/DemoMode/
+            - swdev/src/warlock/plugins/ApplicationLauncher/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/observer
+            - path: core_engine/weapons_warlock/warlock_plugins/platform_management
+    core_engine/weapons_warlock/warlock_plugins/sixdof_flight:
+        dir_name: SixDOF 数据可视化与调参插件
+        title: SixDOF 数据可视化与调参插件
+        scope:
+            - swdev/src/warlock/plugins/SixDOF_Data/
+            - swdev/src/warlock/plugins/SixDOF_Tuner/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/weapons_warlock/warlock_plugins/track_analysis:
+        dir_name: 航迹与区域浏览插件集（Tracks _ TrackDetailsDisplay _ ZoneBrowser）
+        title: 航迹与区域浏览插件集（Tracks / TrackDetailsDisplay / ZoneBrowser）
+        scope:
+            - swdev/src/warlock/plugins/Tracks/
+            - swdev/src/warlock/plugins/TrackDetailsDisplay/
+            - swdev/src/warlock/plugins/ZoneBrowser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_plugins/map_and_projection
+    core_engine/weapons_warlock/warlock_plugins/utilities_stubs:
+        dir_name: Warlock 辅助工具与脚本提示插件集
+        title: Warlock 辅助工具与脚本提示插件集
+        scope:
+            - swdev/src/warlock/plugins/TerrainTools/
+            - swdev/src/warlock/plugins/PositionConverterTool/
+            - swdev/src/warlock/plugins/UnitConverterTool/
+            - swdev/src/warlock/plugins/VideoCapture/
+            - swdev/src/warlock/plugins/WsfPrompt/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    core_engine/weapons_warlock/warlock_plugins/visualization_effects:
+        dir_name: Warlock 可视化增强插件集合（VisualEffects _ Performance _ CoverageOverlay）
+        title: Warlock 可视化增强插件集合（VisualEffects / Performance / CoverageOverlay）
+        scope:
+            - swdev/src/warlock/plugins/VisualEffects/
+            - swdev/src/warlock/plugins/Performance/
+            - swdev/src/warlock/plugins/CoverageOverlay/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/weapons_warlock/warlock_plugins/logging_marking
+    core_engine/weapons_warlock/warlock_plugins/weapon_system:
+        dir_name: 武器与交互可视化 Warlock 插件集
+        title: 武器与交互可视化 Warlock 插件集
+        scope:
+            - swdev/src/warlock/plugins/WeaponBrowser/
+            - swdev/src/warlock/plugins/AirCombatVisualization/
+            - swdev/src/warlock/plugins/Interactions/
+            - swdev/src/warlock/plugins/CommVis/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_weapon_server
+    core_engine/weapons_warlock/weapon_tools:
+        dir_name: 武器工具集与发射计算机生成器
+        title: 武器工具集与发射计算机生成器
+        scope:
+            - swdev/src/weapon_tools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    documentation:
+        dir_name: AFSIM 文档站点与变更日志
+        title: AFSIM 文档站点与变更日志
+        scope:
+            - documentation/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    electronic_warfare_demos:
+        dir_name: 电子战与网络攻防演示集
+        title: 电子战与网络攻防演示集
+        scope:
+            - demos/electronic_warfare/
+            - demos/chaff/
+            - demos/noise_cloud/
+            - demos/cyber/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/script
+            - path: core_engine/core_runtime/wsf_cyber
+            - path: core_engine/core_runtime/wsf_nx
+    iads_and_c2_demos:
+        dir_name: IADS 与兵棋推演演示场景集
+        title: IADS 与兵棋推演演示场景集
+        scope:
+            - demos/iads/
+            - demos/iads_c2_demos/
+            - demos/aea_iads/
+            - demos/orwaca_iads/
+            - demos/wargame/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/dis
+            - path: core_engine/core_runtime/wsf_core_runtime/processor
+            - path: core_engine/core_runtime/wsf_cyber
+            - path: core_engine/core_runtime/wsf_l16
+    missile_and_weapons_demos:
+        dir_name: 导弹与火力演示集（Ballistic、TBM、Hellfire、激光指示器、Fires）
+        title: 导弹与火力演示集（Ballistic、TBM、Hellfire、激光指示器、Fires）
+        scope:
+            - demos/ballistic/
+            - demos/ballistic_missile_shootdown/
+            - demos/hellfire/
+            - demos/new_guidance/
+            - demos/tbm_demos/
+            - demos/fires/
+            - demos/laser_designator/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/processor
+            - path: core_engine/core_runtime/wsf_l16
+            - path: core_engine/core_runtime/wsf_mil_parser
+            - path: core_engine/core_runtime/wsf_weapon_server
+    naval_and_ground_demos:
+        dir_name: 海军与地面演示场景集
+        title: 海军与地面演示场景集
+        scope:
+            - demos/ship_ad/
+            - demos/swarm/
+            - demos/traffic_demos/
+            - demos/terrain_following/
+            - demos/kinematic_mover/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/traffic
+    resources:
+        dir_name: 游戏资源与着色器数据目录
+        title: 游戏资源与着色器数据目录
+        scope:
+            - resources/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    scenario_examples:
+        dir_name: AFSIM 演示场景集合
+        title: AFSIM 演示场景集合
+        scope:
+            - demos/simple_scenario/
+            - demos/launcher/
+            - demos/gun_engagement/
+            - demos/shooter/
+            - demos/heatmap/
+            - demos/route_finder_demos/
+            - demos/timeline/
+            - demos/timeline_lead/
+            - demos/alv_routing/
+            - demos/alternate_locations/
+            - demos/logistics/
+            - demos/l16_j11/
+            - demos/visual_part/
+            - demos/signature_demos/
+            - demos/engage/
+            - demos/draw/
+            - demos/parachute/
+            - demos/hel/
+            - demos/sosm/
+            - demos/coverage_demos/
+            - demos/behavior_tree/
+            - demos/route_finder_demos/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_mil_parser
+            - path: core_engine/core_runtime/wsf_parser
+    sensor_and_radar_demos:
+        dir_name: 传感器与雷达演示用例集
+        title: 传感器与雷达演示用例集
+        scope:
+            - demos/sensor_demos/
+            - demos/sensor_plot/
+            - demos/oth_radar/
+            - demos/acoustic/
+            - demos/bearing_only/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/sensor
+            - path: core_engine/core_runtime/wsf_mtt
+            - path: core_engine/core_runtime/wsf_nx
+            - path: core_engine/visualization_gui/wizard/visualization_plotting_plugins/pattern_visualization
+    simulation_framework_demos:
+        dir_name: AFSIM 仿真框架演示与基础类型库
+        title: AFSIM 仿真框架演示与基础类型库
+        scope:
+            - demos/base_types/
+            - demos/base_types_nx/
+            - demos/example_scripts/
+            - demos/script_demos/
+            - demos/distributed_operations/
+            - demos/exchange_proc/
+            - demos/multiresolution_demos/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/script
+            - path: core_engine/core_runtime/wsf_core_runtime/xio
+            - path: core_engine/shared_tools/scene_gen
+            - path: core_engine/visualization_gui/wizard/model_scenario_importers/model_import
+    space_and_satellite_demos:
+        dir_name: 太空与卫星演示集（AFSIM 示例）
+        title: 太空与卫星演示集（AFSIM 示例）
+        scope:
+            - demos/satellite_demos/
+            - demos/cislunar/
+            - demos/space_operations/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/mover
+            - path: core_engine/core_runtime/wsf_core_runtime/sensor
+            - path: core_engine/visualization_gui/wizard/analysis_tools_plugins/space_tools
+    tools:
+        dir_name: AFSIM 辅助工具集
+        title: AFSIM 辅助工具集
+        scope:
+            - tools/
+        source_files: []
+        children:
+            - tools/afpy
+            - tools/chugger
+            - tools/conversion_helpers
+            - tools/doc_assets
+            - tools/pyrunplotter
+        depends_on: []
+        related_to: []
+    tools/afpy:
+        dir_name: AFSIM 工具脚本共享 Python 库
+        title: AFSIM 工具脚本共享 Python 库
+        scope:
+            - tools/afpy/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    tools/chugger:
+        dir_name: Chugger 分布式仿真矩阵执行工具
+        title: Chugger 分布式仿真矩阵执行工具
+        scope:
+            - tools/Chugger/
+        source_files: []
+        children:
+            - tools/chugger/client
+            - tools/chugger/parser
+            - tools/chugger/server
+        depends_on: []
+        related_to:
+            - path: core_engine/event_mission_runtime
+    tools/chugger/client:
+        dir_name: Chugger 客户端进程管理器
+        title: Chugger 客户端进程管理器
+        scope:
+            - tools/Chugger/chugger/client/
+            - tools/Chugger/ChuggerClient.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    tools/chugger/parser:
+        dir_name: Chugger 参数解析与前端入口
+        title: Chugger 参数解析与前端入口
+        scope:
+            - tools/Chugger/chugger/parser/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    tools/chugger/server:
+        dir_name: Chugger 仿真分发服务器与本地执行管理器
+        title: Chugger 仿真分发服务器与本地执行管理器
+        scope:
+            - tools/Chugger/chugger/server/
+            - tools/Chugger/ChuggerServer.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/xio_sim
+    tools/conversion_helpers:
+        dir_name: AFSIM 工具与后处理脚本集合
+        title: AFSIM 工具与后处理脚本集合
+        scope:
+            - tools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_mil_parser
+            - path: core_engine/core_runtime/wsf_parser
+            - path: core_engine/core_runtime/wsf_util
+            - path: core_engine/shared_tools/artificer
+            - path: core_engine/shared_tools/profiling
+            - path: core_engine/visualization_gui/wizard/model_scenario_importers/scenario_importer
+    tools/doc_assets:
+        dir_name: AFSIM 工具文档与 Chugger 用户手册
+        title: AFSIM 工具文档与 Chugger 用户手册
+        scope:
+            - tools/doc/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    tools/pyrunplotter:
+        dir_name: AFSIM 仿真结果可视化与对比绘图工具
+        title: AFSIM 仿真结果可视化与对比绘图工具
+        scope:
+            - tools/pyrunplotter/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_engine/core_runtime/wsf_core_runtime/event_pipe
+            - path: core_engine/core_runtime/wsf_util
+    training:
+        dir_name: AFSIM 培训与示例工程
+        title: AFSIM 培训与示例工程
+        scope:
+            - training/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

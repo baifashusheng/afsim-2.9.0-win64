@@ -1,0 +1,7 @@
+# 本仓库只跟踪 .qoder 知识库，AFSIM 发行包本体全部忽略
+/*
+!/.gitignore
+!/.qoder/
+.DS_Store
+__pycache__/
+*.swp
